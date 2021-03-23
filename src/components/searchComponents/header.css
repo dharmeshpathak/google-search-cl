@@ -1,0 +1,27 @@
+body { 
+    padding-top: 65px; 
+}
+.MuiTab-wrapper {
+    align-items:center;
+    display:inline-flex;
+    flex-direction:row !important;
+    justify-content:center;
+    padding:1px !important;
+    width:100%;}
+
+    .MuiTab-labelIcon{
+        min-height: fit-content !important;
+    } 
+    .MuiTab-root {
+        min-width: 100px !important;
+        text-transform:none !important;
+        font-size: 0.8rem !important; 
+        padding: 3px 12px !important;
+    }
+    .MuiSvgIcon-root{
+        margin-right: 3px;
+        font-size: 1.3rem !important; 
+    }
+    .MuiTab-labelIcon .MuiTab-wrapper > *:first-child {
+        margin-bottom: 0 !important;
+    }

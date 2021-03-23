@@ -1,24 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import MainSearchScreen from "./components/MainSearchScreen";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import SearchScreen from "./components/SearchScreen";
+import { SearchData } from "./api/GoogleSearch";
 
 function App() {
+  const [SearchTerm, setSearchTerm] = useState("");
+  const [searchData, setsearchData] = useState([]);
+  const setSearch = async (term) => {
+    setSearchTerm(term);
+    
+  };
+  const setData = async (term) => {
+    console.log("in set data of app,js");
+    const searched = await SearchData(term);
+     setsearchData(searched);
+    // console.log(searchData)
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <div className="App">
+              <Navbar />
+              <MainSearchScreen
+                SearchTerm={SearchTerm}
+                setSearch={setSearch}
+                setData={setData}
+              />
+            </div>
+          </Route>
+
+          {SearchTerm !== "" ? (
+            <Route
+              exact
+              path={"/search"}
+              component={() => (
+                <SearchScreen
+                  searchData={searchData}
+                  setSearch={setSearch}
+                  SearchTerm={SearchTerm}
+                  setData={setData}
+                />
+              )}
+            />
+          ) : null}
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
