@@ -129,7 +129,7 @@ function SearchSubHeader({SearchTerm ,searchData ,setData}) {
         
         {console.log(searchData)} 
         
-          {/* { <p className="small font-weight-light">
+          { <p className="small font-weight-light">
             About {searchData.searchInformation.formattedTotalResults} results (
             {searchData.searchInformation.formattedSearchTime}
             seconds){' '}
@@ -138,7 +138,7 @@ function SearchSubHeader({SearchTerm ,searchData ,setData}) {
             return(
                 <DataShow key = {value.htmlTitle + value.displayLink} displayLink={value.displayLink} formattedUrl = {value.formattedUrl}
                 htmlTitle={value.htmlTitle} htmlSnippet={value.htmlSnippet} />)
-        })}    */}
+        })}   
        
         
       </TabPanel>
