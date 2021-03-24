@@ -1,5 +1,13 @@
-body { 
+ body { 
     padding-top: 65px; 
+}
+::-webkit-scrollbar {
+    width: 0px;
+    /* background: transparent; make scrollbar transparent */
+    display: none;
+}
+p{
+    font-size: smaller;
 }
 .MuiTab-wrapper {
     align-items:center;
@@ -13,10 +21,11 @@ body {
         min-height: fit-content !important;
     } 
     .MuiTab-root {
-        min-width: 100px !important;
+        min-width: 80px !important;
         text-transform:none !important;
         font-size: 0.8rem !important; 
         padding: 3px 12px !important;
+        margin:0px !important
     }
     .MuiSvgIcon-root{
         margin-right: 3px;
@@ -24,4 +33,23 @@ body {
     }
     .MuiTab-labelIcon .MuiTab-wrapper > *:first-child {
         margin-bottom: 0 !important;
+    }
+    .MuiTabs-fixed{
+        overflow-x: scroll !important;
+        width: 100% !important;
+    height: 100% !important;
+
+        
+
+    }
+    
+
+    
+    .MuiTabs-flexContainer{
+        background-color: white !important;
+        
+    }
+    .MuiTab-textColorInherit {
+        color: inherit;
+        opacity: 1;
     }

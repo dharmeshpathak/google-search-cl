@@ -22,7 +22,7 @@ function App() {
   const setData = async (term) => {
     console.log("in set data of app,js");
     const searched = await SearchData(term);
-     setsearchData(searched);
+    await  setsearchData(searched);
     // console.log(searchData)
   };
   return (
