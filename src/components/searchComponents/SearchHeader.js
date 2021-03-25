@@ -188,7 +188,7 @@ function SearchHeader({ SearchTerm, setSearch,setData }) {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            <IconButton aria-label="show 4 new mails" color="inherit" href="https://store.google.com/">
               <AppsIcon />
             </IconButton>
 

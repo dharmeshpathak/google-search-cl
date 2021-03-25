@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Button } from "@material-ui/core";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 
 import MicIcon from "@material-ui/icons/Mic";
@@ -60,7 +59,7 @@ function MainSearchScreen({ setSearch, SearchTerm, setData }) {
 
         <Box component="form">
           <IconButton className={classess.iconButton} aria-label="menu">
-            <MenuIcon />
+           
           </IconButton>
           <InputBase
             value={inputValue}
@@ -92,10 +91,10 @@ function MainSearchScreen({ setSearch, SearchTerm, setData }) {
         </Box>
 
         <Box>
-          <Button style={{ margin: "5px" }} variant="contained">
+          <Button style={{ margin: "5px" }} variant="contained" href="https://www.google.com/">
             Google Search
           </Button>
-          <Button variant="contained" style={{ margin: "5px" }}>
+          <Button variant="contained" style={{ margin: "5px" }} href="https://www.google.com/doodles">
             I'm Feeling Lucky
           </Button>
         </Box>

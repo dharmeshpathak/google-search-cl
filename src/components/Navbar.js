@@ -7,12 +7,10 @@ import IconButton from "@material-ui/core/IconButton";
 import { Box } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import AppsIcon from "@material-ui/icons/Apps";
-
+import "./Navbar.css"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    
-    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -26,21 +24,28 @@ export default function Navbar() {
   const classes = useStyles();
 
   return (
-    <div component={Box}  className={classes.root}>
-      <AppBar component={Box} position="fixed" display="flex" style={{ background: '#ffff' ,boxShadow:"none"}} >
+    <div component={Box} className={classes.root}>
+      <AppBar
+        component={Box}
+        position="fixed"
+        display="flex"
+        style={{ background: "#ffff", boxShadow: "none" }}
+      >
         <Toolbar component={Box} justifyContent="flex-end" color="black">
-          <Button  color="inherit">
+          <Button
+            color="inherit"
+            href="https://www.gmail.com "
+            
+          >
             Gmail
           </Button>
-          <Button style={{ fontFamily: "calibri" }} >
-            Image
-          </Button>
+          <Button color="inherit"  href="https://www.google.com/imghp?hl=EN">Image</Button>
           <IconButton
             edge="end"
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-            
+            href="https://store.google.com/"
           >
             <AppsIcon />
           </IconButton>
@@ -49,7 +54,7 @@ export default function Navbar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-            
+            href="/"
           >
             <AccountCircleIcon />
           </IconButton>

@@ -11,6 +11,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import SearchScreen from "./components/SearchScreen";
 import { SearchData } from "./api/GoogleSearch";
+import Footer from "./components/Footer";
 
 function App() {
   const [SearchTerm, setSearchTerm] = useState("");
@@ -56,7 +57,9 @@ function App() {
           ) : null}
           <Redirect to="/" />
         </Switch>
+       
       </Router>
+      
     </>
   );
 }
