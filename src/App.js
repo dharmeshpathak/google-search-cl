@@ -21,7 +21,7 @@ function App() {
     
   };
   const setData = async (term) => {
-    console.log("in set data of app,js");
+    // console.log("in set data of app,js");
     const searched = await SearchData(term);
     await  setsearchData(searched);
     // console.log(searchData)

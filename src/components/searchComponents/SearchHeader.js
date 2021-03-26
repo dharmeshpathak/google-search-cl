@@ -112,13 +112,13 @@ function SearchHeader({ SearchTerm, setSearch,setData }) {
     // e.preventDefault();
     
      setSearch(term.trim());
-     console.log(SearchTerm)
+    //  console.log(SearchTerm)
     //  setData(term);
 
   }
   const handleOnClick= (term)=>{
      handleOnSubmit(term)
-     console.log("log from onclick",SearchTerm);
+    //  console.log("log from onclick",SearchTerm);
     const term1 = SearchTerm
      setData(term1)
 

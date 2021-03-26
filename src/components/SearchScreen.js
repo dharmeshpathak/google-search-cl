@@ -1,31 +1,47 @@
-import React from 'react'
+import React from "react";
+import Loader from "react-loader-spinner";
 
+import SearchHeader from "./searchComponents/SearchHeader";
+import SearchSubHeader from "./searchComponents/SearchSubHeader";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-import SearchHeader from './searchComponents/SearchHeader'
-import SearchSubHeader from './searchComponents/SearchSubHeader'
+function SearchScreen({ SearchTerm, searchData, setData, setSearch }) {
+  return (
+    <div>
+      <SearchHeader
+        setSearch={setSearch}
+        SearchTerm={SearchTerm}
+        setData={setData}
+      />
 
-function SearchScreen({SearchTerm, searchData,setData,setSearch}) {
-    
-
-    return (
-
-        <div>
-        <SearchHeader setSearch={setSearch} SearchTerm={SearchTerm} setData ={setData}/> 
-
-        {searchData.length !== 0?(<SearchSubHeader  SearchTerm = {SearchTerm}  searchData={searchData} setData ={setData}/>):(console.log("halted"))
-        
-        } 
-        {searchData.length !== 0?null:(<h1 style={{justifyContent:"center",alignItems:"center", margin:"0 auto" ,color:"grey"}}>loading data</h1>)
-        
-    } 
-        
-        
-                                                                        
-       {console.log(searchData)}
-       
-       
+      {searchData.length !== 0 ? (
+        <SearchSubHeader
+          SearchTerm={SearchTerm}
+          searchData={searchData}
+          setData={setData}
+        />
+      ) : (
+        console.log(" ")
+      )}
+      {searchData.length !== 0 ? null : (
+        <div
+          style={{
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+            marginTop: "10%",
+          }}
+        >
+          <Loader type="Circles" color="blue" height={200} width={200} />
         </div>
-    )
+      )}
+
+      {/* {console.log(searchData)} */}
+    </div>
+  );
 }
 
-export default SearchScreen
+export default SearchScreen;

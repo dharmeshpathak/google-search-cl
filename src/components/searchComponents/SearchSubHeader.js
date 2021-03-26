@@ -95,7 +95,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#ffff",
-    paddingLeft:'10%'
+    paddingLeft:'10%',
+    marginBottom:"100px"
   },
   padding: {
     padding: theme.spacing(0.1),
@@ -167,7 +168,7 @@ export default function SearchSubHeader({SearchTerm ,searchData ,setData}) {
         {items.map((value,index)=>{
             return(
                 <DataShow key = {value.htmlTitle + value.displayLink} displayLink={value.displayLink} formattedUrl = {value.formattedUrl}
-                htmlTitle={value.htmlTitle} htmlSnippet={value.htmlSnippet} />)
+                htmlTitle={value.htmlTitle} htmlSnippet={value.htmlSnippet} image = {value.pagemap?.cse_image?.length > 0 && value.pagemap?.cse_image[0]?.src}/>)
         })}   
        
         </TabPanel>
