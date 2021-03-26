@@ -1,5 +1,5 @@
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background: #f7f4f4;
@@ -18,11 +18,13 @@
 }
 
 .footer__top {
+    display: flex;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5%;
     padding-right: 5%;
+    justify-content: flex-start !important;
 }
 
 .footer__bottomLeft > a, .footer__bottomRight > a, .footer__top > a {

@@ -38,6 +38,7 @@ function App() {
                 setSearch={setSearch}
                 setData={setData}
               />
+             
             </div>
           </Route>
 
@@ -52,12 +53,13 @@ function App() {
                   SearchTerm={SearchTerm}
                   setData={setData}
                 />
+                
               )}
             />
           ) : null}
           <Redirect to="/" />
         </Switch>
-       
+        <Footer/>
       </Router>
       
     </>

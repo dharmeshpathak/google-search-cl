@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import SearchHeader from './searchComponents/SearchHeader'
 import SearchSubHeader from './searchComponents/SearchSubHeader'
 
@@ -16,11 +18,12 @@ function SearchScreen({SearchTerm, searchData,setData,setSearch}) {
         {searchData.length !== 0?null:(<h1 style={{justifyContent:"center",alignItems:"center", margin:"0 auto" ,color:"grey"}}>loading data</h1>)
         
     } 
-        {/* <SearchSubHeader  SearchTerm = {SearchTerm}  searchData={searchData} setData ={setData}/> */}
+        
         
                                                                         
        {console.log(searchData)}
-            
+       
+       
         </div>
     )
 }

@@ -8,6 +8,7 @@ import MicIcon from "@material-ui/icons/Mic";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+
 const useStyless = makeStyles((theme) => ({
   root: {
     padding: "2px 4px",
@@ -99,7 +100,10 @@ function MainSearchScreen({ setSearch, SearchTerm, setData }) {
           </Button>
         </Box>
       </div>
-    </div>
+     
+       </div>
+     
+    
   );
 }
 
