@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/google-search-cl/static/css/main.58d5deef.chunk.css",
-    "main.js": "/google-search-cl/static/js/main.2345dfad.chunk.js",
-    "main.js.map": "/google-search-cl/static/js/main.2345dfad.chunk.js.map",
+    "main.css": "/google-search-cl/static/css/main.5dd38544.chunk.css",
+    "main.js": "/google-search-cl/static/js/main.c32dbcca.chunk.js",
+    "main.js.map": "/google-search-cl/static/js/main.c32dbcca.chunk.js.map",
     "runtime-main.js": "/google-search-cl/static/js/runtime-main.13bbd771.js",
     "runtime-main.js.map": "/google-search-cl/static/js/runtime-main.13bbd771.js.map",
     "static/js/2.66b55762.chunk.js": "/google-search-cl/static/js/2.66b55762.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f4b4bb7e.chunk.js": "/google-search-cl/static/js/3.f4b4bb7e.chunk.js",
     "static/js/3.f4b4bb7e.chunk.js.map": "/google-search-cl/static/js/3.f4b4bb7e.chunk.js.map",
     "index.html": "/google-search-cl/index.html",
-    "static/css/main.58d5deef.chunk.css.map": "/google-search-cl/static/css/main.58d5deef.chunk.css.map",
+    "static/css/main.5dd38544.chunk.css.map": "/google-search-cl/static/css/main.5dd38544.chunk.css.map",
     "static/js/2.66b55762.chunk.js.LICENSE.txt": "/google-search-cl/static/js/2.66b55762.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13bbd771.js",
     "static/js/2.66b55762.chunk.js",
-    "static/css/main.58d5deef.chunk.css",
-    "static/js/main.2345dfad.chunk.js"
+    "static/css/main.5dd38544.chunk.css",
+    "static/js/main.c32dbcca.chunk.js"
   ]
 }
