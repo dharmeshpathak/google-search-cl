@@ -5,13 +5,14 @@ import SearchHeader from "./searchComponents/SearchHeader";
 import SearchSubHeader from "./searchComponents/SearchSubHeader";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-function SearchScreen({ SearchTerm, searchData, setData, setSearch }) {
+function SearchScreen({ SearchTerm, searchData, setData, setSearch,openVoiceSearch }) {
   return (
     <div>
       <SearchHeader
         setSearch={setSearch}
         SearchTerm={SearchTerm}
         setData={setData}
+        openVoiceSearch = {openVoiceSearch}
       />
 
       {searchData.length !== 0 ? (

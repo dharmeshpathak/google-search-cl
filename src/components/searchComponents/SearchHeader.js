@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SearchHeader({ SearchTerm, setSearch,setData }) {
+function SearchHeader({ SearchTerm, setSearch,setData ,openVoiceSearch}) {
   const classes = useStyles();
   const [inputValue, setinputValue] = useState(SearchTerm);
   const handleOnChange = (e) => {
@@ -119,8 +119,8 @@ function SearchHeader({ SearchTerm, setSearch,setData }) {
   const handleOnClick= (term)=>{
      handleOnSubmit(term)
     //  console.log("log from onclick",SearchTerm);
-    const term1 = SearchTerm
-     setData(term1)
+    // const term1 = SearchTerm
+     setData(term)
 
   }
   
@@ -181,7 +181,7 @@ function SearchHeader({ SearchTerm, setSearch,setData }) {
             }
               
             </IconButton>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            <IconButton aria-label="show 4 new mails" color="inherit" onClick={()=>openVoiceSearch()}>
               <MicIcon style={{ color: "blue" }} />
             </IconButton>
           </Box>

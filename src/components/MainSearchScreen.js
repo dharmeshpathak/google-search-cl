@@ -30,10 +30,10 @@ const useStyless = makeStyles((theme) => ({
     margin: 4,
   },
 }));
-function MainSearchScreen({ setSearch, SearchTerm, setData }) {
+function MainSearchScreen({ setSearch, SearchTerm, setData ,openVoiceSearch,voiceText,voiceSearch }) {
   const classess = useStyless();
 
-  const [inputValue, setinputValue] = useState("");
+  const [inputValue, setinputValue] = useState(voiceText);
 
   const handleOnChange = (e) => {
     // e.preventDefault();
@@ -63,7 +63,7 @@ function MainSearchScreen({ setSearch, SearchTerm, setData }) {
            
           </IconButton>
           <InputBase
-            value={inputValue}
+            value={voiceSearch?voiceText: inputValue }
             onChange={handleOnChange}
             className={classess.input}
             placeholder="Search Google "
@@ -79,13 +79,14 @@ function MainSearchScreen({ setSearch, SearchTerm, setData }) {
             aria-label="search"
             onClick={() => setData(SearchTerm)}
           >
-            {(SearchTerm === "" ? false : true) && <SearchIcon />}
+            {(SearchTerm === "" && voiceText ==="" ? false : true) && <SearchIcon />}
           </IconButton>
 
           <IconButton
             color="primary"
             className={classess.iconButton}
             aria-label="directions"
+            onClick={()=>openVoiceSearch()}
           >
             <MicIcon />
           </IconButton>
