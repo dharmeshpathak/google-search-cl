@@ -5,7 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import "./header.css";
-import { Box } from "@material-ui/core";
+import { Box, Container } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
@@ -157,7 +157,7 @@ export default function SearchSubHeader({SearchTerm ,searchData ,setData}) {
       </div>
       <div className={classes.demo2}>
         <TabPanel value={value} index={0}>
-          {/* {console.log(searchData)}  */}
+          {console.log(searchData)} 
 
                   
           { <p className="small font-weight-light" style={{fontSize:"8px !important"}}>
@@ -182,7 +182,22 @@ export default function SearchSubHeader({SearchTerm ,searchData ,setData}) {
         <h1>Maps</h1>
         </TabPanel>
         <TabPanel value={value} index={4}>
-         <h1>Images</h1>
+    
+         <Container fluid style={{ textAlign: "center" }}>
+         <div className = "cardlist " style = {{marginTop:"25px",paddingRight:"5%" ,display:'flex',justifyContent:'center',flexDirection:"row",flexWrap:'wrap' , alignItems:"center"}}>
+
+     {items.map((photo)=>(
+       
+      <div className="card" style={{width:"auto",height:"auto",maxHeight:"400px",maxWidth:"400px",}}>
+              <img 
+                className="card--image"
+                alt={photo.htmlTitle}
+                src={photo.pagemap?.cse_image?.length > 0 && photo.pagemap?.cse_image[0]?.src}
+              ></img>
+            </div>
+     ))}
+     </div>
+     </Container>
         </TabPanel>
         <TabPanel value={value} index={5}>
         <h1>shopping</h1>
